@@ -1,0 +1,29 @@
+<%- include("./partials/header") %>
+<%- include("./partials/navbarl") %>
+
+<div class="container mt-4">
+    <br>
+    <h3 class="mb-4">Result</h3>
+    <table class="table mt-5">
+        <tbody>
+          <tr>
+            <td>Roll Number:</td>
+            <td><%= student.rollNumber %></td>
+          </tr>
+          <tr>
+            <td>Name:</td>
+            <td><%= student.name %></td>
+          </tr>
+          <tr>
+            <td>Date of Birth:</td>
+            <td><%= student.dob %></td>
+          </tr>
+          <tr>
+            <td>Score:</td>
+            <td><%= student.score %></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<%- include("./partials/footer") %>

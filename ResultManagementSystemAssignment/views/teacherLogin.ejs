@@ -1,0 +1,41 @@
+<%- include("./partials/header") %>
+<%- include("./partials/navbar") %>
+
+<div class="container mt-5">
+    <br><br>
+    <section class="vh-100">
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+             
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <form action="/teacher-login" method="POST">
+                <div class="form-outline mb-4">
+                  <input type="email" name="email" class="form-control form-control-lg"
+                    placeholder="Enter a valid email address" required/>
+                </div>
+      
+                <div class="form-outline mb-3">
+                  <input type="password" name="password" class="form-control form-control-lg"
+                    placeholder="Enter password" required/>
+                </div>
+
+                <% if(showError){ %>
+                  <div class="errorMessage">
+                    Please enter valid credentials!
+                  </div>
+                <% } %> 
+      
+                <div class="text-center text-lg-start mt-4 pt-2">
+                  <input type="submit" value="Login" class="btn btn-primary">
+                </div>
+      
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+</div>
+
+<%- include("./partials/footer") %>

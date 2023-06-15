@@ -1,0 +1,28 @@
+<%- include("./partials/header") %>
+<%- include("./partials/navbarl") %>
+
+<div class="container">
+    <h3 class="mb-4">Add New Result</h3>
+    <form action="/teacher-view/addRecord" method="POST">
+        <div class="form-group">
+            <label>Roll Number:</label>
+            <input type="text" name="rollNumber" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Date of Birth:</label>
+            <input type="date" name="dob" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Score:</label>
+            <input type="text" name="score" class="form-control" required>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-md btn-primary mt-4">
+    </form>
+    <br><br>
+</div>
+
+<%- include("./partials/footer") %>

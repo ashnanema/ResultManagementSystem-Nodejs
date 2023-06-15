@@ -1,0 +1,27 @@
+.vertical-scrollable>.scroll {
+  position: absolute;
+  top: 200px;
+  bottom: 100px;
+  width: 85%;
+  overflow-y: scroll;
+}
+.navbar {
+  background-color: rgb(145, 219, 176);
+  margin-left: -10px;    
+}
+.navbar-custom {
+  background-color: lightgreen;
+}
+.fa{
+  color: rgb(250, 249, 245);
+}
+.fa-user{
+  color:rgb(0, 140, 255);
+}
+
+.errorMessage{
+  color: red;
+}
+.footer{
+  background-color: lightgreen;
+}

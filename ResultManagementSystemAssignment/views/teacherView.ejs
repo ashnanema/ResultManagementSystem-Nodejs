@@ -1,0 +1,46 @@
+<%- include("./partials/header") %>
+<%- include("./partials/navbarl") %>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<div class="container vertical-scrollable mt-5">
+    <div class="row">
+        <h4>All Students</h4>
+        <a href="/teacher-view/add-record" type="button" class="btn btn-outline-primary ml-auto"><i class='far fa-file-alt'></i> Add Record</a>
+    </div>
+
+    <div class="row text-center scroll">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Roll No.</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Score</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% students.forEach(student => { %>
+                    <tr>
+                        <td><%= student.rollNumber %></th>
+                        <td><%= student.name %></td>
+                        <td><%= student.dob %></td>
+                        <td><%= student.score %></td>
+                        <td>
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <a class="btn btn-success btn-sm rounded-0" href="teacher-view/edit-record/<%= student._id %>" type="button" title="Edit"><i class="fa fa-edit"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn btn-danger btn-sm rounded-0" href="teacher-view/delete-record/<%= student._id %>" type="button" title="Delete"><i class="fa fa-trash"></i></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<%- include("./partials/footer") %>

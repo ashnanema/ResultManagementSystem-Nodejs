@@ -1,0 +1,45 @@
+<%- include("./partials/header") %>
+<%- include("./partials/navbar") %>
+
+<div class="container mt-5">
+    <br><br>
+    <section class="vh-100">
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+             
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <h4>Find Result</h4>
+              <br>
+              <form action="/find-result" method="POST">
+                <div class="form-outline mb-4">
+                  <label for="rollNumber"><b>Roll Number:</b></label>
+                  <input type="text" name="rollNumber" class="form-control form-control-lg"
+                    placeholder="Roll Number" required/>
+                </div>
+      
+                <div class="form-outline mb-3">
+                  <label for="rollNumber"><b>Date Of Birth:</b></label>
+                  <input type="date" name="name" class="form-control form-control-lg"
+                    placeholder="Name" required />
+                </div>
+
+                <% if(showError){ %>
+                  <div class="errorMessage">
+                    Please enter valid Roll Number and Date of Birth
+                  </div>
+                <% } %>  
+      
+                <div class="text-center text-lg-start mt-4 pt-2">
+                  <input type="submit" value="Search" class="btn btn-primary btn-lg pl-4 pr-4">
+                </div>
+      
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+</div>
+
+<%- include("./partials/footer") %>
